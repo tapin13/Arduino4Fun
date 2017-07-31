@@ -1,0 +1,8 @@
+# Arduino4Fun
+Small programs just for fun, studying Arduino
+
+diod_different_blink - Blink lightdiod with different light power
+
+diod_different_blink_2 - Blink lightdiod with different light power, delay, steps
+
+
