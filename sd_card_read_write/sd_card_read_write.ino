@@ -1,8 +1,15 @@
 #include <SD.h>
 
+/*
+The circuit:
+ * SD card attached to SPI bus as follows:
+ ** CS - pin 4
+ ** MOSI - pin 11
+ ** MISO - pin 12
+ ** CLK - pin 13
+*/
+
 #define CS_PIN 4 // Chip Select depends on your SD card shield or module. Pin 4 used here for consistency with other Arduino examples.
-//MOSI - pin 11 on Arduino Uno
-//MISO - pin 12 on Arduino Uno
 
 File file;
 char* file_name = "test.txt";
@@ -18,6 +25,7 @@ void setup() {
   }
   Serial.println("done.");
 
+  // comment next line if you don't want remove file each run.
   SD.remove(file_name);
 
   Serial.print("Open file with write permissions... ");
